@@ -1,0 +1,48 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# Publish Web Output
+*.Publish.xml
+*.pubxml
+*.azurePubxml
+
+# Others
+sql/
+*.Cache
+ClientBin/
+[Ss]tyle[Cc]op.*
+![Ss]tyle[Cc]op.targets
+~$*
+*~
+*.dbmdl
+*.[Pp]ublish.xml
+
+*.publishsettings
+*.sqlite
+*.dtbcache
+*.ide
+*.lock
+*.cache
+*.pdb
