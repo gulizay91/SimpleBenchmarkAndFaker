@@ -18,7 +18,7 @@
     {
     }
 
-    #endregion Constructors
+    #endregion
 
     #region Methods
 
@@ -138,6 +138,6 @@
       return names;
     }
 
-    #endregion Methods
+    #endregion
   }
 }

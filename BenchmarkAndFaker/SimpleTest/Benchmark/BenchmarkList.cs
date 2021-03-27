@@ -18,7 +18,7 @@
     /// </summary>
     private static readonly BenchmarkSamples Sample = new BenchmarkSamples(100000);
 
-    #endregion Fields
+    #endregion
 
     #region Methods
 
@@ -57,6 +57,6 @@
     [Benchmark]
     public List<string> GetPassiveCustomerNameLinqForeachTwo() => Sample.PassiveCustomerNameLinqForeachTwo();
 
-    #endregion Methods
+    #endregion
   }
 }

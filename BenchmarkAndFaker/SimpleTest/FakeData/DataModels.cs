@@ -18,29 +18,25 @@
       /// Defines the JointStock.
       /// </summary>
       JointStock,
-
       /// <summary>
       /// Defines the Limited.
       /// </summary>
       Limited,
-
       /// <summary>
       /// Defines the Collective.
       /// </summary>
       Collective,
-
       /// <summary>
       /// Defines the LimitedPartnership.
       /// </summary>
       LimitedPartnership,
-
       /// <summary>
       /// Defines the Cooperativve.
       /// </summary>
       Cooperativve
     }
 
-    #endregion Enums
+    #endregion
 
     /// <summary>
     /// Defines the <see cref="Address" />.
@@ -64,7 +60,7 @@
       /// </summary>
       public string ZipCode { get; set; }
 
-      #endregion Properties
+      #endregion
     }
 
     /// <summary>
@@ -124,7 +120,7 @@
       /// </summary>
       public string Title { get; set; }
 
-      #endregion Properties
+      #endregion
     }
   }
 }

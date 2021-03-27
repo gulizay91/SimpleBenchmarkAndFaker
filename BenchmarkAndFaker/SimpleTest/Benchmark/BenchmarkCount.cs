@@ -21,7 +21,7 @@
     /// </summary>
     private static readonly BenchmarkSamples Sample = new BenchmarkSamples(60000);
 
-    #endregion Fields
+    #endregion
 
     #region Methods
 
@@ -53,6 +53,6 @@
     [Benchmark]
     public int GetActiveCustomerLinqWhere() => Sample.ActiveCustomerLinqWhere();
 
-    #endregion Methods
+    #endregion
   }
 }

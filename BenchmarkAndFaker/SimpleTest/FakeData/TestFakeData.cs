@@ -12,7 +12,7 @@
     /// </summary>
     private static readonly FakeDataSamples Sample = new FakeDataSamples(10000);
 
-    #endregion Fields
+    #endregion
 
     #region Methods
 
@@ -21,6 +21,6 @@
     /// </summary>
     public static void GetCustomerFakeDataList() => Sample.CustomerFakeDataList();
 
-    #endregion Methods
+    #endregion
   }
 }

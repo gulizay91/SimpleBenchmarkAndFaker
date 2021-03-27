@@ -22,7 +22,7 @@
     /// </summary>
     private int counter = 10000;
 
-    #endregion Fields
+    #endregion
 
     #region Methods
 
@@ -43,7 +43,7 @@
     /// <summary>
     /// The AppendWithStringBuilder.
     /// </summary>
-    [Benchmark()]
+    [Benchmark]
     public void AppendWithStringBuilder()
     {
       StringBuilder sb = new StringBuilder(counter);
@@ -54,6 +54,6 @@
       }
     }
 
-    #endregion Methods
+    #endregion
   }
 }

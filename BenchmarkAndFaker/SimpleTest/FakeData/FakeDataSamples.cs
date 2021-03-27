@@ -3,10 +3,6 @@
   using Newtonsoft.Json;
   using System;
 
-  //using System.Text.Encodings.Web;
-  //using System.Text.Json;
-  //using System.Text.Unicode;
-
   /// <summary>
   /// Defines the <see cref="FakeDataSamples" />.
   /// </summary>
@@ -22,7 +18,7 @@
     {
     }
 
-    #endregion Constructors
+    #endregion
 
     #region Methods
 
@@ -40,6 +36,6 @@
       Console.WriteLine(_customer.Count);
     }
 
-    #endregion Methods
+    #endregion
   }
 }

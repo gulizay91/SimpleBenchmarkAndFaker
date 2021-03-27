@@ -17,7 +17,7 @@
     /// </summary>
     private static Faker<Customer> CustomerFaker => GenerateFaker();
 
-    #endregion Properties
+    #endregion
 
     #region Methods
 
@@ -75,6 +75,6 @@
       return CustomerFaker.Generate(count);
     }
 
-    #endregion Methods
+    #endregion
   }
 }

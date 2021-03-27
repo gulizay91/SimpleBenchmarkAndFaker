@@ -16,7 +16,7 @@
     /// </summary>
     private const int N = 10000;
 
-    #endregion Constants
+    #endregion
 
     #region Fields
 
@@ -35,7 +35,7 @@
     /// </summary>
     private readonly SHA256 sha256 = SHA256.Create();
 
-    #endregion Fields
+    #endregion
 
     #region Constructors
 
@@ -48,7 +48,7 @@
       new Random(42).NextBytes(data);
     }
 
-    #endregion Constructors
+    #endregion
 
     #region Methods
 
@@ -66,6 +66,6 @@
     [Benchmark]
     public byte[] Sha256() => sha256.ComputeHash(data);
 
-    #endregion Methods
+    #endregion
   }
 }
