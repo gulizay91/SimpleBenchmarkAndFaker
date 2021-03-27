@@ -8,7 +8,10 @@
   [MemoryDiagnoser] // garbage collection and allocated
   [Orderer(BenchmarkDotNet.Order.SummaryOrderPolicy.FastestToSlowest)]
   [RankColumn]
-  [RyuJitX64Job, RyuJitX86Job]
+  //[RyuJitX64Job, RyuJitX86Job]
+  [SimpleJob(BenchmarkDotNet.Jobs.RuntimeMoniker.NetCoreApp50)]
+  [SimpleJob(BenchmarkDotNet.Jobs.RuntimeMoniker.Net48)]
+  [SimpleJob(BenchmarkDotNet.Jobs.RuntimeMoniker.NetCoreApp31)]
   public class BenchmarkCount
   {
     #region Fields
@@ -16,9 +19,9 @@
     /// <summary>
     /// Defines the Sample.
     /// </summary>
-    private static readonly BenchmarkSamples Sample = new(60000);
+    private static readonly BenchmarkSamples Sample = new BenchmarkSamples(60000);
 
-    #endregion
+    #endregion Fields
 
     #region Methods
 
@@ -50,6 +53,6 @@
     [Benchmark]
     public int GetActiveCustomerLinqWhere() => Sample.ActiveCustomerLinqWhere();
 
-    #endregion
+    #endregion Methods
   }
 }

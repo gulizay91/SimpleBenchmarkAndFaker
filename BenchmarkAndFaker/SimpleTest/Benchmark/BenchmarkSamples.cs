@@ -1,11 +1,7 @@
 ﻿namespace SimpleTest.Benchmark
 {
-  using System;
   using System.Collections.Generic;
   using System.Linq;
-  using System.Text.Encodings.Web;
-  using System.Text.Json;
-  using System.Text.Unicode;
 
   /// <summary>
   /// Defines the <see cref="BenchmarkSamples" />.
@@ -22,7 +18,7 @@
     {
     }
 
-    #endregion
+    #endregion Constructors
 
     #region Methods
 
@@ -142,22 +138,6 @@
       return names;
     }
 
-    /// <summary>
-    /// The CustomerFakeDataList.
-    /// </summary>
-    private void CustomerFakeDataList()
-    {
-      var opt = new JsonSerializerOptions()
-      {
-        WriteIndented = true,
-        Encoder = JavaScriptEncoder.Create(UnicodeRanges.All)
-      };
-
-      string valueAsJson = JsonSerializer.Serialize(_customer, opt);
-
-      Console.WriteLine(valueAsJson);
-    }
-
-    #endregion
+    #endregion Methods
   }
 }

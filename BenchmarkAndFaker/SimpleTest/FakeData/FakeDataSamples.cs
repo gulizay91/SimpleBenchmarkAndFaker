@@ -1,9 +1,11 @@
 ﻿namespace SimpleTest.FakeData
 {
+  using Newtonsoft.Json;
   using System;
-  using System.Text.Encodings.Web;
-  using System.Text.Json;
-  using System.Text.Unicode;
+
+  //using System.Text.Encodings.Web;
+  //using System.Text.Json;
+  //using System.Text.Unicode;
 
   /// <summary>
   /// Defines the <see cref="FakeDataSamples" />.
@@ -20,7 +22,7 @@
     {
     }
 
-    #endregion
+    #endregion Constructors
 
     #region Methods
 
@@ -29,18 +31,15 @@
     /// </summary>
     public void CustomerFakeDataList()
     {
-      var opt = new JsonSerializerOptions()
+      string valueAsJson = JsonConvert.SerializeObject(_customer, new JsonSerializerSettings
       {
-        WriteIndented = true,
-        Encoder = JavaScriptEncoder.Create(UnicodeRanges.All)
-      };
-
-      string valueAsJson = JsonSerializer.Serialize(_customer, opt);
+        Formatting = Formatting.Indented
+      });
 
       Console.WriteLine(valueAsJson);
       Console.WriteLine(_customer.Count);
     }
 
-    #endregion
+    #endregion Methods
   }
 }

@@ -62,11 +62,12 @@
     {
       Console.WriteLine("**************************************************************************************************");
       Console.WriteLine("******************************************BENCHMARKS**********************************************");
-      Console.WriteLine("1 - CountBenchmark");
-      Console.WriteLine("2 - ListBenchmark");
-      Console.WriteLine("3 - CryptographyBenchmark");
+      Console.WriteLine("1 - StringProcessBenchmarkRunner");
+      Console.WriteLine("2 - CountBenchmarkRunner");
+      Console.WriteLine("3 - ListBenchmark");
+      Console.WriteLine("4 - CryptographyBenchmark");
       Console.WriteLine("*******************************************FAKEDATA-BOGUS*****************************************");
-      Console.WriteLine("4 - GetCustomerFakeDataList");
+      Console.WriteLine("11 - GetCustomerFakeDataList");
       Console.WriteLine("**************************************************************************************************");
 
       var choice = Console.ReadLine();
@@ -75,18 +76,22 @@
       switch (choice)
       {
         case "1":
-          CountBenchmarkRunner();
+          StringProcessBenchmarkRunner();
           break;
 
         case "2":
-          ListBenchmarkRunner();
+          CountBenchmarkRunner();
           break;
 
         case "3":
-          CryptographyBenchmarkRunner();
+          ListBenchmarkRunner();
           break;
 
         case "4":
+          CryptographyBenchmarkRunner();
+          break;
+
+        case "11":
           GetCustomerFakeDataList();
           break;
 
@@ -95,6 +100,14 @@
       }
     }
 
-    #endregion
+    /// <summary>
+    /// The StringProcessBenchmarkRunner.
+    /// </summary>
+    private static void StringProcessBenchmarkRunner()
+    {
+      BenchmarkRunner.Run<BenchmarkStringProcess>();
+    }
+
+    #endregion Methods
   }
 }

@@ -16,7 +16,7 @@
     /// </summary>
     protected readonly List<Customer> _customer;
 
-    #endregion
+    #endregion Fields
 
     #region Constructors
 
@@ -29,6 +29,6 @@
       _customer = FakeDataMother.SimpleCustomerList(count.Value);
     }
 
-    #endregion
+    #endregion Constructors
   }
 }

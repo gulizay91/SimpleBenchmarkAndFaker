@@ -17,7 +17,7 @@
     /// </summary>
     private static Faker<Customer> CustomerFaker => GenerateFaker();
 
-    #endregion
+    #endregion Properties
 
     #region Methods
 
@@ -32,7 +32,7 @@
                 .RuleFor(i => i.StreetName, i => i.Address.StreetName())
                 .RuleFor(i => i.ZipCode, i => i.Address.ZipCode());
 
-      Random rnd = new();
+      Random rnd = new Random();
       var financialId = rnd.Next(0, 1) == 0 ? rnd.Next(10, 99).ToString() + rnd.Next(10000000, 99999999).ToString() : rnd.Next(100, 999).ToString() + rnd.Next(10000000, 99999999).ToString();
       Faker<Customer> _customerFaker = new Faker<Customer>("tr")
         .RuleFor(r => r.Id, Guid.NewGuid())
@@ -75,6 +75,6 @@
       return CustomerFaker.Generate(count);
     }
 
-    #endregion
+    #endregion Methods
   }
 }

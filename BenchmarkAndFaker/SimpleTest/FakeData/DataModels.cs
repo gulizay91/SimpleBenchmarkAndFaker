@@ -40,7 +40,7 @@
       Cooperativve
     }
 
-    #endregion
+    #endregion Enums
 
     /// <summary>
     /// Defines the <see cref="Address" />.
@@ -64,7 +64,7 @@
       /// </summary>
       public string ZipCode { get; set; }
 
-      #endregion
+      #endregion Properties
     }
 
     /// <summary>
@@ -124,7 +124,7 @@
       /// </summary>
       public string Title { get; set; }
 
-      #endregion
+      #endregion Properties
     }
   }
 }

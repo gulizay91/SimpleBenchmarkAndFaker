@@ -22,7 +22,7 @@
     /// </summary>
     private int counter = 10000;
 
-    #endregion
+    #endregion Fields
 
     #region Methods
 
@@ -54,6 +54,6 @@
       }
     }
 
-    #endregion
+    #endregion Methods
   }
 }
