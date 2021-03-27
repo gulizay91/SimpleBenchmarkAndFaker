@@ -1,32 +1,23 @@
-﻿namespace SimpleTest
+﻿namespace SimpleTest.FakeData
 {
   using Bogus;
   using System;
   using System.Collections.Generic;
-  using static SimpleTest.DataModels;
+  using static SimpleTest.FakeData.DataModels;
 
   /// <summary>
   /// Defines the <see cref="FakeDataMother" />.
   /// </summary>
   public static class FakeDataMother
   {
-    #region Fields
-
-    /// <summary>
-    /// Defines the _customerFaker.
-    /// </summary>
-    private static Faker<Customer> _customerFaker = new();
-
-    #endregion Fields
-
     #region Properties
 
     /// <summary>
     /// Gets the CustomerFaker.
     /// </summary>
-    public static Faker<Customer> CustomerFaker => GenerateFaker();
+    private static Faker<Customer> CustomerFaker => GenerateFaker();
 
-    #endregion Properties
+    #endregion
 
     #region Methods
 
@@ -36,13 +27,20 @@
     /// <returns>The <see cref="Faker{Customer}"/>.</returns>
     public static Faker<Customer> GenerateFaker()
     {
+      Faker<Address> addressFaker = new Faker<Address>("tr")
+                .RuleFor(i => i.City, i => i.Address.City())
+                .RuleFor(i => i.StreetName, i => i.Address.StreetName())
+                .RuleFor(i => i.ZipCode, i => i.Address.ZipCode());
+
       Random rnd = new();
       var financialId = rnd.Next(0, 1) == 0 ? rnd.Next(10, 99).ToString() + rnd.Next(10000000, 99999999).ToString() : rnd.Next(100, 999).ToString() + rnd.Next(10000000, 99999999).ToString();
-      _customerFaker = new Faker<Customer>()
+      Faker<Customer> _customerFaker = new Faker<Customer>("tr")
         .RuleFor(r => r.Id, Guid.NewGuid())
         .RuleFor(r => r.FinancialId, financialId)
         .RuleFor(r => r.Email, r => r.Person.Email)
         .RuleFor(r => r.Phone, r => r.Person.Phone)
+        .RuleFor(i => i.CompanyType, i => i.PickRandom<CompanyTypeEnum>())
+        .RuleFor(i => i.Address, addressFaker)
         .RuleFor(r => r.IsActive, r => r.Random.Bool());
       if (financialId.Length == 11)
       {
@@ -77,6 +75,6 @@
       return CustomerFaker.Generate(count);
     }
 
-    #endregion Methods
+    #endregion
   }
 }

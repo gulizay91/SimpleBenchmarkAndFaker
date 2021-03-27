@@ -42,6 +42,7 @@ ClientBin/
 *.publishsettings
 *.sqlite
 *.dtbcache
+*.dtbcache.v2
 *.ide
 *.lock
 *.cache
