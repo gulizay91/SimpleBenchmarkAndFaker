@@ -21,6 +21,11 @@
     /// </summary>
     public static void GetCustomerFakeDataList() => Sample.CustomerFakeDataList();
 
+    /// <summary>
+    /// The GetHighestNumberofEmployeesFakeData.
+    /// </summary>
+    public static void GetHighestNumberofEmployeesFakeData() => Sample.HighestNumberofEmployeesFakeData();
+
     #endregion
   }
 }

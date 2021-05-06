@@ -111,6 +111,14 @@
     }
 
     /// <summary>
+    /// The GetHighestNumberofEmployeesFakeData.
+    /// </summary>
+    private static void GetHighestNumberofEmployeesFakeData()
+    {
+      TestFakeData.GetHighestNumberofEmployeesFakeData();
+    }
+
+    /// <summary>
     /// The Main.
     /// </summary>
     /// <param name="args">The args<see cref="string[]"/>.</param>
@@ -127,6 +135,7 @@
       Console.WriteLine("*******************************************FAKEDATA-BOGUS*****************************************");
       Console.WriteLine("default - DefineDirectoryByFileNameWithSpan");
       Console.WriteLine("11 - GetCustomerFakeDataList");
+      Console.WriteLine("12 - GetHighestNumberofEmployeesFakeData");
       Console.WriteLine("**************************************************************************************************");
 
       var choice = Console.ReadLine();
@@ -159,6 +168,10 @@
 
         case "11":
           GetCustomerFakeDataList();
+          break;
+
+        case "12":
+          GetHighestNumberofEmployeesFakeData();
           break;
 
         default:

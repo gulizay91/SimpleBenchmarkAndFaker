@@ -39,8 +39,9 @@
         .RuleFor(r => r.FinancialId, financialId)
         .RuleFor(r => r.Email, r => r.Person.Email)
         .RuleFor(r => r.Phone, r => r.Person.Phone)
-        .RuleFor(i => i.CompanyType, i => i.PickRandom<CompanyTypeEnum>())
-        .RuleFor(i => i.Address, addressFaker)
+        .RuleFor(r => r.EmployeeCount, r => r.Random.Int(0, 500000))
+        .RuleFor(r => r.CompanyType, r => r.PickRandom<CompanyTypeEnum>())
+        .RuleFor(r => r.Address, addressFaker)
         .RuleFor(r => r.IsActive, r => r.Random.Bool());
       if (financialId.Length == 11)
       {

@@ -86,6 +86,11 @@
       public string Email { get; set; }
 
       /// <summary>
+      /// Gets or sets the EmployeeCount.
+      /// </summary>
+      public int EmployeeCount { get; set; }
+
+      /// <summary>
       /// Gets or sets the FinancialId.
       /// </summary>
       public string FinancialId { get; set; }

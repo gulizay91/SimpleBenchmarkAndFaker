@@ -2,6 +2,7 @@
 {
   using Newtonsoft.Json;
   using System;
+  using System.Linq;
 
   /// <summary>
   /// Defines the <see cref="FakeDataSamples" />.
@@ -34,6 +35,15 @@
 
       Console.WriteLine(valueAsJson);
       Console.WriteLine(_customer.Count);
+    }
+
+    /// <summary>
+    /// The HighestNumberofEmployeesFakeData.
+    /// </summary>
+    public void HighestNumberofEmployeesFakeData()
+    {
+      var result = _customer.Where(r => r.IsActive).OrderByDescending(r => r.EmployeeCount).Select(r => r.EmployeeCount).FirstOrDefault();
+      Console.WriteLine(result);
     }
 
     #endregion
